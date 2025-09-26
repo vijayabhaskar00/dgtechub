@@ -23,6 +23,133 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Contact section styles */
+        .contact-info {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-info-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .contact-info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-info-icon i {
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .contact-info-content h5 {
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .contact-info-content p {
+            color: #666;
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .contact-info-content a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info-content a:hover {
+            color: #ff6b35;
+        }
+        
+        .contact-form {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        
+        .contact-form h3 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form .form-control {
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 0 15px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form .form-control:focus {
+            border-color: #ff6b35;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+        }
+        
+        .contact-form textarea.form-control {
+            height: auto;
+            padding: 15px;
+            resize: vertical;
+        }
+        
+        /* Navigation active state */
+        .navbar-nav .nav-link.active {
+            color: #ff6b35 !important;
+        }
+        
+        /* Offset for fixed header */
+        section[id], div[id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
 
 </head>
 
@@ -111,10 +238,10 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link scroll-link" href="#home">Home</a></li>
+                                <li class="nav-item"><a class="nav-link scroll-link" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link scroll-link" href="#gallery">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link scroll-link" href="#contact">Contact</a></li>
                             </ul>
                             <!-- nav-right -->
                             <div class="nav-right">
@@ -123,7 +250,7 @@
                                             class="far fa-search"></i></button>
                                 </div>
                                 <div class="nav-btn">
-                                    <a href="contact.html" class="theme-btn">Let's Talk <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#contact" class="theme-btn scroll-link">Let's Talk <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +281,7 @@
     <main class="main">
 
         <!-- hero slider -->
-        <div class="hero-section">
+        <div id="home" class="hero-section">
             <div class="hero-slider owl-carousel owl-theme">
                 <div class="hero-single" style="background: url(assets/img/slider/slider-1.jpg)">
                     <div class="container">
@@ -280,7 +407,7 @@
 
 
         <!-- about area -->
-        <div class="about-area py-120">
+        <div id="about" class="about-area py-120">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -337,7 +464,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="about.html" class="theme-btn mt-4">Discover More <i
+                            <a href="#gallery" class="theme-btn mt-4 scroll-link">Discover More <i
                                     class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -667,7 +794,7 @@
                         <div class="mb-20 mt-10">
                             <a href="#" class="cta-border-btn"><i class="fal fa-headset"></i>+91-9542629816</a>
                         </div>
-                        <a href="contact.html" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="theme-btn scroll-link">Contact Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -676,7 +803,7 @@
 
 
         <!-- gallery-area -->
-        <div class="gallery-area py-120">
+        <div id="gallery" class="gallery-area py-120">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
@@ -758,6 +885,98 @@
             </div>
         </div>
         <!-- gallery-area end -->
+
+
+        <!-- contact-area -->
+        <div id="contact" class="contact-area py-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="fas fa-bring-forward"></i> Contact Us</span>
+                            <h2 class="site-title">Get In <span>Touch</span></h2>
+                            <div class="heading-divider"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-info wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".25s">
+                            <h3>Contact Information</h3>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="far fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Our Location</h5>
+                                    <p>CTC Center, Hyderabad</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Phone Number</h5>
+                                    <p><a href="tel:+919542629816">+91-9542629816</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Email Address</h5>
+                                    <p><a href="mailto:info@dgtechub.in">info@dgtechub.in</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h5>Working Hours</h5>
+                                    <p>Mon - Sat (08AM - 10PM)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-form wow fadeInRight" data-wow-duration="1s" data-wow-delay=".25s">
+                            <h3>Send Us A Message</h3>
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="theme-btn">Send Message <i class="fas fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact-area end -->
 
 
         <!-- testimonial-area -->
@@ -898,6 +1117,99 @@
     <script src="assets/js/masonry.pkgd.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for navigation links
+            $('.scroll-link').click(function(e) {
+                e.preventDefault();
+                
+                var target = $(this).attr('href');
+                var targetSection = $(target);
+                
+                if (targetSection.length) {
+                    var offsetTop = targetSection.offset().top - 80; // Adjust for fixed header
+                    
+                    $('html, body').animate({
+                        scrollTop: offsetTop
+                    }, 800, 'easeInOutQuart');
+                }
+                
+                // Close mobile menu if open
+                if ($('.navbar-toggler').is(':visible')) {
+                    $('.navbar-toggler').click();
+                }
+            });
+            
+            // Highlight active navigation item on scroll
+            $(window).scroll(function() {
+                var scrollPos = $(document).scrollTop() + 100;
+                
+                $('.scroll-link').each(function() {
+                    var currLink = $(this);
+                    var target = $(currLink.attr('href'));
+                    
+                    if (target.length) {
+                        var targetTop = target.offset().top;
+                        var targetBottom = targetTop + target.outerHeight();
+                        
+                        if (scrollPos >= targetTop && scrollPos < targetBottom) {
+                            $('.scroll-link').removeClass('active');
+                            currLink.addClass('active');
+                        }
+                    }
+                });
+                
+                // Handle the case when at the top of the page
+                if (scrollPos < 200) {
+                    $('.scroll-link').removeClass('active');
+                    $('a[href="#home"]').addClass('active');
+                }
+            });
+            
+            // Set active state for home on page load
+            $('a[href="#home"]').addClass('active');
+            
+            // Contact form submission (you can customize this)
+            $('.contact-form form').submit(function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                var formData = {
+                    name: $('input[name="name"]').val(),
+                    email: $('input[name="email"]').val(),
+                    subject: $('input[name="subject"]').val(),
+                    message: $('textarea[name="message"]').val()
+                };
+                
+                // Basic validation
+                if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                
+                // You can add your form submission logic here
+                // For now, just show a success message
+                alert('Thank you for your message! We will get back to you soon.');
+                
+                // Reset form
+                this.reset();
+            });
+        });
+        
+        // Update scroll behavior for existing links in hero section
+        $(document).ready(function() {
+            // Update hero buttons to scroll to about section instead of external links
+            $('.hero-content .hero-btn a').each(function() {
+                var buttonText = $(this).text().toLowerCase();
+                if (buttonText.includes('about')) {
+                    $(this).attr('href', '#about').addClass('scroll-link');
+                } else if (buttonText.includes('learn')) {
+                    $(this).attr('href', '#gallery').addClass('scroll-link');
+                }
+            });
+        });
+    </script>
 
 </body>
 
